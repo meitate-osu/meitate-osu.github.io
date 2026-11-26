@@ -9,7 +9,19 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in a browser.
+Open [http://localhost:3000/blog](http://localhost:3000/blog) in a browser. The
+app is configured with `/blog` as its base path to match the GitHub Pages URL.
+
+## Publish
+
+Push changes to `main` to trigger the repository's GitHub Pages workflow. The
+repository's Pages setting must use **GitHub Actions** as its deployment
+source. The workflow places this app's static export in the published site's
+`/blog` directory.
+
+This is a static site: dynamic server features, API routes, and runtime image
+optimization are not available on GitHub Pages. Add static assets to `public/`
+and reference them with paths that include `/blog` when needed.
 
 ## Structure
 
